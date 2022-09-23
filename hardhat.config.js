@@ -1,60 +1,21 @@
-require("@nomiclabs/hardhat-waffle");
-require('@nomiclabs/hardhat-ethers');
+require("@nomicfoundation/hardhat-toolbox");
 
-// This is a sample Hardhat task. To learn how to create your own go to
-// https://hardhat.org/guides/create-task.html
-// task("accounts", "Prints the list of accounts", async () => {
-//   const accounts = await ethers.getSigners();
+// Go to https://www.alchemyapi.io, sign up, create
+// a new App in its dashboard, and replace "KEY" with its key
+const ALCHEMY_API_KEY = "wopBKVjhOCSLdjwKIuMNsZO6PaG9IKqV";
 
-//   for (const account of accounts) {
-//     console.log(account.address);
-//   }
-// });
+// Replace this private key with your Goerli account private key
+// To export your private key from Metamask, open Metamask and
+// go to Account Details > Export Private Key
+// Beware: NEVER put real Ether into testing accounts
+const GOERLI_PRIVATE_KEY = "61d32d4c1d9f2f946490f1fcf35f109ebb86d2b8e514f488a376a73e3a659083";
 
-// You need to export an object to set up your config
-// Go to https://hardhat.org/config/ to learn more
-
-/**
- * @type import('hardhat/config').HardhatUserConfig
- */
-
-const mnemonic ="stem upgrade tent dizzy hedgehog spoon achieve tray enter mention design name";
 module.exports = {
-  defaultNetwork: "testnet",
+  solidity: "0.8.9",
   networks: {
-  	localhost: {
-      url: "http://127.0.0.1:8545"
-    },
-    hardhat: {
-    },
-    testnet: {
-      url: "https://data-seed-prebsc-1-s1.binance.org:8545",
-      chainId: 97,
-      gasPrice: 20000000000,
-      accounts: {mnemonic: mnemonic}
-    },
-    // mainnet: {
-    //   url: "https://bsc-dataseed.binance.org/",
-    //   chainId: 56,
-    //   gasPrice: 20000000000,
-    //   accounts: [process.env.privateKey]
-    // }
-  },
-  solidity: {
-  version: "0.5.16",
-  settings: {
-    optimizer: {
-      enabled: true
+    mumbai: {
+      url: `https://eth-goerli.alchemyapi.io/v2/${ALCHEMY_API_KEY}`,
+      accounts: [GOERLI_PRIVATE_KEY]
     }
-   }
-  },
-  paths: {
-    sources: "./contracts",
-    tests: "./test",
-    cache: "./cache",
-    artifacts: "./artifacts"
-  },
-  mocha: {
-    timeout: 20000
   }
 };
