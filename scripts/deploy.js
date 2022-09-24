@@ -22,6 +22,7 @@ async function main() {
     `Lock with 1 ETH and unlock timestamp ${unlockTime} deployed to ${lock.address}`
   );
 
+  //Primitives contract script
   const Primitive_data = await hre.ethers.getContractFactory("Primitives");
   const primitive_data = await Primitive_data.deploy();
 
@@ -29,6 +30,14 @@ async function main() {
 
   console.log("Primitive deployed addrss! ",primitive_data.address);
   // 0x9f449703bE017949Ed4cFFF37a11B27467702Cb0
+
+  //types of variable 
+
+  const Variables = await hre.ethers.getContractFactory("Variables");
+  const variables = await Variables.deploy();
+  await variables.deployed();
+  console.log("Variables deployed addrss! ",variables.address);
+  // 0x97981c03F13ca5072531fA6dC0cbf1FDA27920C8
 }
 
 // We recommend this pattern to be able to use async/await everywhere
