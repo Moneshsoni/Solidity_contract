@@ -21,6 +21,13 @@ async function main() {
   console.log(
     `Lock with 1 ETH and unlock timestamp ${unlockTime} deployed to ${lock.address}`
   );
+
+  const Primitive_data = await hre.ethers.getContractFactory("Primitives");
+  const primitive_data = await Primitive_data.deploy();
+
+  await primitive_data.deployed();
+
+  console.log();
 }
 
 // We recommend this pattern to be able to use async/await everywhere
