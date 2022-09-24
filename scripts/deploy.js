@@ -27,7 +27,8 @@ async function main() {
 
   await primitive_data.deployed();
 
-  console.log();
+  console.log("Primitive deployed addrss! ",primitive_data.address);
+  // 0x9f449703bE017949Ed4cFFF37a11B27467702Cb0
 }
 
 // We recommend this pattern to be able to use async/await everywhere
