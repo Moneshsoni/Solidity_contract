@@ -38,6 +38,19 @@ async function main() {
   await variables.deployed();
   console.log("Variables deployed addrss! ",variables.address);
   // 0x97981c03F13ca5072531fA6dC0cbf1FDA27920C8
+
+
+  const Contstant = await hre.ethers.getContractFactory("Contstant");
+  const contstant = await Contstant.deploy();
+  await contstant.deployed();
+  console.log("Contstant deployed address! ",contstant.address);
+  // 0x6185D1B6d08FdD959938CAA955A4537f7b088Edd
+
+  const Immutable = await hre.ethers.getContractFactory("Immutable");
+  const immutable = await Immutable.deploy(1000);
+  await immutable.deployed();
+
+  console.log('Immutablle contract address! ',immutable.address);
 }
 
 // We recommend this pattern to be able to use async/await everywhere
