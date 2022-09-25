@@ -18,12 +18,25 @@ module.exports = {
       chainId: 97,
       gasPrice: 20000000000,
       accounts: [PRIVATE_KEY]
+    },
+    matictestnet:{
+      url: "https://polygon-mumbai.g.alchemy.com/v2/wopBKVjhOCSLdjwKIuMNsZO6PaG9IKqV",
+      chainId: 80001,
+      gasPrice: 20000000000,
+      accounts: [PRIVATE_KEY]
     }
   },
   etherscan: {
     apiKey: {
       bscTestnet: 'VJFJH2863CT4EC3XDDQ45HD7R92DDNWXRQ'
     }
+  },
+
+  etherscan: {
+    apiKey: {
+      polygonMumbai: 'your API key'
+    }
   }
+
   
 };
