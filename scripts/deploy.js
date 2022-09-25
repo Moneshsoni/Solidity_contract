@@ -51,6 +51,8 @@ async function main() {
   await immutable.deployed();
 
   console.log('Immutablle contract address! ',immutable.address);
+
+  // 0x92942ce0902699515b59Be2D4942f723310FEA91
 }
 
 // We recommend this pattern to be able to use async/await everywhere
