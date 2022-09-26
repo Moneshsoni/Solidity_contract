@@ -54,8 +54,11 @@ async function main() {
 
   // 0x92942ce0902699515b59Be2D4942f723310FEA91
 
+  const SimpleStorage = await hre.ethers.getContractFactory("SimpleStorage");
+  const simpleStorage = await SimpleStorage.deploy();
+  await simpleStorage.deployed();
+  console.log("simpleStorage contract address! ",simpleStorage.address);
 
-  
 }
 
 // We recommend this pattern to be able to use async/await everywhere
