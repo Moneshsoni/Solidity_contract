@@ -12,3 +12,6 @@ npx hardhat node
 npx hardhat run scripts/deploy.js
 ```
 # Solidity_contract
+
+## metamask address
+0x162836F25C7Edf90BA0D35d2244114abcfBD3245
