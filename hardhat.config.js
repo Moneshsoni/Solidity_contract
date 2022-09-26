@@ -24,6 +24,11 @@ module.exports = {
       chainId: 80001,
       gasPrice: 20000000000,
       accounts: [PRIVATE_KEY]
+    },
+    ropsten:{
+      url:"https://ropsten.infura.io/v3/",
+      chainId:3,
+      accounts: [PRIVATE_KEY]
     }
   },
   etherscan: {
