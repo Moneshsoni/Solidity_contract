@@ -54,10 +54,16 @@ async function main() {
 
   // 0x92942ce0902699515b59Be2D4942f723310FEA91
 
-  const SimpleStorage = await hre.ethers.getContractFactory("SimpleStorage");
-  const simpleStorage = await SimpleStorage.deploy();
-  await simpleStorage.deployed();
-  console.log("simpleStorage contract address! ",simpleStorage.address);
+  // const SimpleStorage = await hre.ethers.getContractFactory("SimpleStorage");
+  // const simpleStorage = await SimpleStorage.deploy();
+  // await simpleStorage.deployed();
+  // console.log("simpleStorage contract address! ",simpleStorage.address);
+
+
+  const IfElse = await hre.ethers.getContractFactory("IfElse");
+  const ifElse = await IfElse.deploy();
+  await ifElse.deployed();
+  console.log("This is IfElse address!",ifElse.address);
 
 }
 

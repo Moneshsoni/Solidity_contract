@@ -26,7 +26,7 @@ module.exports = {
       accounts: [PRIVATE_KEY]
     },
     ropsten:{
-      url:"https://ropsten.infura.io/v3/",
+      url:"https://https://ropsten.infura.io/v3/3b15f14b887b4f87a02b94ba1e8643da.infura.io/v3/",
       chainId:3,
       accounts: [PRIVATE_KEY]
     }
