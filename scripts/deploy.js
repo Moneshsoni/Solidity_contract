@@ -60,10 +60,20 @@ async function main() {
   // console.log("simpleStorage contract address! ",simpleStorage.address);
 
 
-  const IfElse = await hre.ethers.getContractFactory("IfElse");
-  const ifElse = await IfElse.deploy();
-  await ifElse.deployed();
-  console.log("This is IfElse address!",ifElse.address);
+  //If else contract condition
+
+  // const IfElse = await hre.ethers.getContractFactory("IfElse");
+  // const ifElse = await IfElse.deploy();
+  // await ifElse.deployed();
+  // console.log("This is IfElse address!",ifElse.address);
+
+  const MosoToken = await  hre.ethers.getContractFactory("MosoToken");
+  const mosoToken = await MosoToken.deploy(25000000);
+  await mosoToken.deployed();
+  console.log("Address of moso Token! ",mosoToken.address);
+
+  // console.log("Token all details",mosoToken);
+  //0x266A8F4Db016F045D692cADB2cd8575956668D8b
 
 }
 
