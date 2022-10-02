@@ -1,13 +1,9 @@
 pragma solidity 0.8.9;
 
-contract Enum {
-    enum Status {
-        Pending,
-        Shiped,
-        Accepted,
-        Rejected,
-        Cancaled
-    }
+// import "./second_enum.sol";
+import "./second_enum.sol";
+contract Enum_contract {
+
 
     Status public status;
 
@@ -28,5 +24,5 @@ contract Enum {
 
     function remove_status()public{
         delete status;
-    }
+    }   
 }
