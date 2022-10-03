@@ -2,11 +2,8 @@ pragma solidity 0.8.9;
 
 // import "./second_enum.sol";
 import "./second_enum.sol";
-contract Enum_contract {
-
-
+contract Enum_contract{
     Status public status;
-
     //get function for getting value
     function get() public view returns (Status) {
         return status;
