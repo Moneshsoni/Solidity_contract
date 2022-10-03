@@ -1,7 +1,6 @@
 pragma solidity 0.8.9;
-
 contract second_enum {
-    enum Status {
+    enum Status{
         Pending,
         Shiped,
         Accepted,
