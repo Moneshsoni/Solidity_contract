@@ -1,8 +1,8 @@
 pragma solidity 0.8.9;
-contract my_num{
-    enum Journey{
-        Going,
-        NotGoing,
-        Cancel
-    }
+enum Status {
+    Pending,
+    Shiped,
+    Accepted,
+    Rejected,
+    Cancaled
 }

@@ -2,9 +2,9 @@ pragma solidity 0.8.9;
 import "./my_num.sol";
 
 contract My_number {
-    Journey public journey;
+    Status public status;
 
     function cancal() public {
-        journey = Journey.Cancal;
+        status = Status.Cancaled;
     }
 }

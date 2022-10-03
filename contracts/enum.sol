@@ -1,13 +1,7 @@
 pragma solidity 0.8.9;
-
+import "./my_number.sol";
 contract Enum_contract{
-    enum Status{
-        Pending,
-        Shiped,
-        Accepted,
-        Rejected,
-        Cancaled
-    }
+
     Status public status;
     //get function for getting value
     function get() public view returns (Status) {
