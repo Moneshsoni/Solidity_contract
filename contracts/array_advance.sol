@@ -24,3 +24,7 @@ contract Array_Advance {
         assert(arr.length == 0);
     }
 }
+
+contract A is Array_Advance{
+    
+}
