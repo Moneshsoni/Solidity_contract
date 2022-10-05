@@ -1,3 +1,4 @@
+pragma solidity 0.8.9;
 contract Array1{
     uint[] public arr1;
     function set_array(uint[] memory _arr1)public{
