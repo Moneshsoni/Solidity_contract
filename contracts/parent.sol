@@ -64,3 +64,5 @@ contract D is B, C {
         super.bar();
     }
 }
+
+
