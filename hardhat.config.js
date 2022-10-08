@@ -11,7 +11,12 @@ const ALCHEMY_API_KEY = "tbN7QYht1nJvIUUgWFK7XulTTPrdXD82";
 const PRIVATE_KEY = "61d32d4c1d9f2f946490f1fcf35f109ebb86d2b8e514f488a376a73e3a659083";
 
 module.exports = {
-  solidity: "0.8.9",
+  solidity: {
+    compilers:[
+      { version: "0.8.9"},
+      {version:"0.8.0"}
+    ]
+  },
   networks: {
     bsctestnet: {
       url: "https://data-seed-prebsc-1-s1.binance.org:8545",
