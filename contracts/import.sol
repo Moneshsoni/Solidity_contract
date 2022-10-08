@@ -10,7 +10,7 @@ contract Import{
         return foo.name();
     }
     
-    function getSum() public pure returns(uint){
-        return foo.sum(23,23);
-    }
+    // function getSum() public pure returns(uint){
+    //     return foo.sum(23,23);
+    // }
 }

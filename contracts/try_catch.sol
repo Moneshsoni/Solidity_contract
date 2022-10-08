@@ -17,7 +17,7 @@ contract Foo {
 
 contract Bar {
     event Log(string message);
-    event LogBBytes(bytes data);
+    event LogBytes(bytes data);
 
     Foo public foo;
 
@@ -26,7 +26,7 @@ contract Bar {
     }
 
     function tryCatchExternalCall(uint256 _i) public {
-        try foo.myFunc(_i) returns (string memory resutl) {
+        try foo.myFunc(_i) returns (string memory result) {
             emit Log(result);
         } catch {
             emit Log("external call failed");
