@@ -27,7 +27,7 @@ contract Caller {
 
     function setXFromAddress(address _addr, uint256 _x) public {
         Callee callee = Callee(_addr);
-        callee.set(_x);
+        callee.setX(_x);
     }
 
     function setXandSendEther(Callee _callee, uint256 _x) public payable {
