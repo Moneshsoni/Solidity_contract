@@ -16,13 +16,7 @@ contract Loops {
         }
     }
 
-    modifier limit(){
-        require(_num>5, "please enter greater than 5 value");
-        _;
-    }
-    
-    
-    function sum(uint256 _n) external pure limit returns (uint256) {
+    function sum(uint256 _n) external pure returns (uint256) {
         if (_n < 5) {
             revert("value is less than 5");
         } else {
@@ -37,7 +31,7 @@ contract Loops {
     }
 
     function sqrt_sum(uint256 _num) public pure returns (uint256) {
-       
+        require(_num>5, "please enter greater than 5 value");
         uint256 g;
         for (uint256 j = 1; j <= _num; j++) {
             g += j;
