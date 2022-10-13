@@ -17,7 +17,7 @@ contract SampleArray{
     }
     
     function Get_array()public view returns(uint[] memory){
-        return arr;
+        return myarray;
     }
 }
 
