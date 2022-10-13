@@ -1,24 +1,18 @@
-pragma solidity 0.8.9;
-// contract Oct_12{
-//     uint public num;
-//     function set_number(uint _num)public{
-//         num = _num;
-//     }
-//     function get_table()public view returns(uint){
-//         return num;
-//     }
-    
-// }
-
-contract SampleArray{
-    uint[] public myarray;
-    function Add_array(uint i)public{
-        myarray.push(i);
+pragma solidity 0.8.13;
+contract Table{
+    uint public num;
+    uint[] public tab;
+    function set_number(uint _num)public{
+        num = _num;
     }
-    
-    function Get_array()public view returns(uint[] memory){
-        return myarray;
+
+    function iterate_loop()public{
+        for(uint i=0;i<=10;i++){
+            tab.push(i*num);
+        }
+    }
+
+    function get_table() public view returns(uint[] memory){
+        return tab;
     }
 }
-
-
