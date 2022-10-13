@@ -59,7 +59,7 @@ contract VerifySignature {
         {
             assembly {
                 r := mload(add(sig, 32))
-                s := mload(add(sig, 64))
+                s := mload(add(sig, 64)     )
                 v := byte(0, mload(add(sig, 96)))
             }
         }
