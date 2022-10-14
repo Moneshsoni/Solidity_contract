@@ -98,4 +98,8 @@ contract BitwiseOps {
         // x >= 2 ** 1
         if (x >= 0x2) r += 1;
     }
+    function test() public{
+    
+    
+    }
 }
