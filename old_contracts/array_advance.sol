@@ -1,30 +1,34 @@
-pragma solidity 0.8.9;
-
-contract Array_Advance {
-    uint256[] public arr;
-
-    function remove(uint256 _index) public{
-        require(_index < arr.length, "Index out of bounds");
-        for (uint256 i = _index; i < arr.length; i++) {
-            arr[i] = arr[i + 1];
-        }
+contract ArrayReplaceLast{
+    uint[] public arr;
+    function remove(uint _index)public {
+        arr[_index] =arr[arr.length-1];
         arr.pop();
     }
-
-    function test() external {
-        arr = [1, 2, 3, 4, 5, 5, 6];
+    function test() external{
+        arr = [1,2,3,4];
+        remove(1);
+        assert(arr.length == 3);
+        assert(arr[0]==1);
+        assert(arr[1]==4);
+        assert(arr[2]==3);
         remove(2);
-        assert(arr[0] == 1);
-        assert(arr[1] == 2);
-        assert(arr[2] == 4);
-        assert(arr[3] == 5);
-        assert(arr.length == 4);
-        arr = [1];
-        remove(0);
-        assert(arr.length == 0);
+        assert(arr.length == 2);
+        assert(arr[0]==1);
+        assert(arr[1]==4);
+    }
+
+    function get_length_function()public view returns(uint){
+
+        return arr.length;
+    }
+
+    function set_array(uint[] calldata _arr)public{
+        arr = _arr;
+    }
+
+    function get_array()public view returns(uint[] memory){
+        return arr;
     }
 }
 
-contract A is Array_Advance{
-    
-}
+// 5,1,2,3
