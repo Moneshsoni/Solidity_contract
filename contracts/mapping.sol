@@ -18,7 +18,7 @@ contract IterableMapping{
     address[] public keys;
     function set(address _key , uint _val)external{
         balances[_key]=_val;
-        if(!insertted[_key]){
+        if(!inserted[_key]){
             inserted[_key]=true;
             keys.push(_key);
         }
